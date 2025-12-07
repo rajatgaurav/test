@@ -16,6 +16,7 @@ Open http://localhost:3000
 ```bash
 npm run build
 npm start
+npm run build && next export -o out
 ```
 
 ## Features
