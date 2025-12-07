@@ -1,4 +1,5 @@
 import { Users, Award, Target, Shield } from 'lucide-react'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'About Us | Petro Power Engineering Services',
@@ -56,6 +57,65 @@ export default function AboutPage() {
               <div key={i} className="bg-white p-6 rounded-lg shadow text-center">
                 <div className="text-3xl font-bold text-primary-600 mb-2">{item.count}+</div>
                 <div className="text-gray-700 font-medium text-sm">{item.role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+            {/* Certificates & Recognition */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="section-title text-center">Certificates & Recognition</h2>
+          <p className="section-subtitle text-center max-w-2xl mx-auto">
+            Our certifications validate our commitment to quality and safety
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            {[
+              {
+                title: 'IBR Special Class Certificate',
+                issuer: 'Govt. of Rajasthan',
+                year: '2022-2024',
+                description: 'Boiler repair/erection certification',
+              },
+              {
+                title: 'BORL Vendor Registration',
+                issuer: 'Bharat Oman Refineries',
+                year: '2021',
+                description: 'Approved service provider',
+              },
+              {
+                title: 'Thermax Appreciation',
+                issuer: 'Thermax Ltd',
+                year: '2020',
+                description: 'KAVACH Safety Champion Award',
+              },
+              {
+                title: 'Pressure Vessel Approval',
+                issuer: 'Govt. of Rajasthan',
+                year: '2023-2025',
+                description: 'Manufacturing approval',
+              },
+              {
+                title: 'GAIL Completion Certificate',
+                issuer: 'GAIL India Ltd',
+                year: '2018',
+                description: 'IBR piping works completion',
+              },
+              {
+                title: 'EIL Approved Contractor',
+                issuer: 'Engineers India Ltd',
+                year: '2017',
+                description: 'Sub-contractor approval',
+              },
+            ].map((cert, i) => (
+              <div key={i} className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg border-2 border-blue-200 hover:shadow-lg transition-shadow">
+                <div className="bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
+                  {cert.year}
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.title}</h3>
+                <p className="text-primary-600 font-semibold text-sm mb-2">{cert.issuer}</p>
+                <p className="text-gray-600 text-sm">{cert.description}</p>
               </div>
             ))}
           </div>

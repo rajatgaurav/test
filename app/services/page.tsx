@@ -1,5 +1,7 @@
 import { Wrench, Flame, Droplets, Shield, Cog, Hammer } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
+
 
 export const metadata = {
   title: 'Our Services | Petro Power Engineering Services',
